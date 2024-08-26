@@ -33,7 +33,7 @@ export const BrowserLinkItem: FC<ReadItemProps> = ({
   };
 
   return (
-    <li className="flex flex-col md:flex-row md:justify-between md:items-center border-b px-1 py-3  sm:px-2 md:p-0 md:border-none gap-2">
+    <li className="flex flex-col md:flex-row md:justify-between md:items-center border-b px-1 py-3 sm:px-2 md:p-0 md:border-none gap-2">
       <div className="flex gap-2 items-start">
         <Checkbox
           onCheckedChange={handleChange}
@@ -42,12 +42,12 @@ export const BrowserLinkItem: FC<ReadItemProps> = ({
         />
         <a
           target="_blank"
-          className="flex flex-col sm:flex-row transition-all hover:underline"
+          className="flex flex-col sm:block transition-all hover:underline"
           onClick={handleLinkClick}
           href={item.url}
         >
           <span className="font-medium shrink-0">{item.name}</span>
-          <span className="hidden sm:block">:&nbsp;</span>
+          <span className="hidden sm:inline-block">:&nbsp;</span>
           <span>{item.title}</span>
         </a>
       </div>
