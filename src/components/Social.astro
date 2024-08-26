@@ -1,0 +1,26 @@
+---
+import IconGithub from "./icons/IconGithub.astro";
+import IconNotes from "./icons/IconNotes.astro";
+import IconTelegram from "./icons/IconTelegram.astro";
+
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+
+const links = [
+  { url: "https://github.com/tokiory", icon: IconGithub },
+  { url: "https://developer-log.vercel.app", icon: IconNotes },
+  { url: "https://t.me/developer_log", icon: IconTelegram },
+]
+
+---
+
+<div class:list={["flex items-center gap-4", className]}>
+  {links.map((link) => (
+    <a class="hover:animate-shake" href={link.url} target="_blank">
+      <link.icon class="w-6 h-6" />
+    </a>
+  ))}
+</div>

@@ -1,0 +1,24 @@
+---
+import Social from "./Social.astro";
+import {ThemeSwitcher} from "./ThemeSwitcher.tsx";
+---
+
+<footer class="mt-12 flex flex-col sm:flex-row items-center justify-between gap-2">
+  <ThemeSwitcher client:load />
+  <div>
+    <div class="text-center text-sm text-muted-foreground">
+      Developed by
+      <a
+        href="https://github.com/tokiory"
+        target="_blank"
+        class="bg-gradient-to-br hover:from-teal-600 hover:to-sky-500 inline-block hover:text-transparent bg-clip-text"
+      >
+        Tokiory
+      </a>
+    </div>
+    <div class="text-center text-xs text-muted-foreground">
+      And a bunch of kittens 🐈 🐈 🐈
+    </div>
+  </div>
+  <Social class="mt-2 sm:mt-0" />
+</footer>

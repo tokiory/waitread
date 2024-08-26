@@ -1,5 +1,7 @@
 ---
 import '@fontsource-variable/inter';
+import '@/styles/globals.css'
+import Footer from '@/components/Footer.astro';
 
 interface Props {
 	title: string;
@@ -8,6 +10,13 @@ interface Props {
 
 const { title, class: className } = Astro.props;
 ---
+
+<script>
+  import { toggleTheme } from "@/lib/theme";
+
+  const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  toggleTheme(theme);
+</script>
 
 <!doctype html>
 <html lang="en">
@@ -24,14 +33,7 @@ const { title, class: className } = Astro.props;
         className
   ]}>
 		<slot />
-    <footer class="mt-12 flex flex-col gap-1">
-      <div class="text-center text-sm text-muted-foreground">
-        Developed by <a href="https://github.com/tokiory" target="_blank">Tokiory</a>
-      </div>
-      <div class="text-center text-xs text-muted-foreground">
-        And a bunch of kittens 🐈 🐈 🐈
-      </div>
-    </footer>
+    <Footer />
 	</body>
 </html>
 

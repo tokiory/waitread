@@ -3,9 +3,24 @@ import tailwind from "@astrojs/tailwind";
 
 import react from "@astrojs/react";
 
+const isDev = process.env.NODE_ENV === 'development';
+
+const getBaseUrl = () => {
+  if (isDev) {
+    return {
+      site: 'http://localhost',
+      base: '',
+    };
+  }
+
+  return {
+    site: 'https://tokiory.github.io',
+    base: 'waitread',
+  };
+}
+
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://tokiory.github.io',
-  base: 'waitread',
+  ...getBaseUrl(),
   integrations: [tailwind(), react()]
 });

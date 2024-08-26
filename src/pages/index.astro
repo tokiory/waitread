@@ -1,17 +1,18 @@
 ---
-import '@/globals.css'
 import Layout from '@/layouts/Layout.astro';
-import List from '@/components/List.astro';
-import ListItem from '@/components/ListItem.astro';
-import { LINKS } from '@/data/links';
+import IconSparkles from '@/components/icons/IconSparkles.astro';
+import { Browser } from '@/modules/browser/components/Browser.tsx';
 ---
 
 <Layout class="flex flex-col" title="Wait, Read">
+<div class="flex items-center gap-2">
+  <IconSparkles class="w-16" />
   <div class="text-4xl sm:text-7xl font-bold">Wait, Read</div>
-  <p class="mt-2"> A curated list of links to read.</p>
-  <List class="mt-4">
-    {LINKS.map((item) => (
-      <ListItem item={item} />
-    ))}
-  </List>
+</div>
+
+  <p class="mt-4 border-l-4 pl-4">List of articles that will pump up your hard skills in development, which you can read at your leisure</p>
+
+  <!-- Maybe it should be inside the list? -->
+
+  <Browser client:load className="mt-4" />
 </Layout>
