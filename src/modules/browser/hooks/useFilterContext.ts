@@ -1,5 +1,4 @@
-import { LINKS } from "@/modules/browser/data/links";
-import { useContext, useMemo, useState } from "react";
+import { useContext, useMemo } from "react";
 import { BrowserFilterContext, INITIAL_FILTERS } from "@/modules/browser/context/BrowserFilterContext";
 
 export const useFilterContext = () => {
@@ -14,7 +13,7 @@ export const useFilterContext = () => {
     return links
     .filter((link) => link.title.toLowerCase().includes(query.toLowerCase()) || link.name.toLowerCase().includes(query.toLowerCase()))
     .filter((link) => [...tags].every(tag => link.tags.includes(tag)))
-  }, [filters, LINKS]);
+  }, [filters, links]);
 
   const updateFilters = (newFilters: Partial<typeof filters>) => {
     setFilters(prev => ({...prev, ...newFilters}));

@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
+import yaml from '@rollup/plugin-yaml';
 
 import react from "@astrojs/react";
 
@@ -22,5 +23,10 @@ const getBaseUrl = () => {
 // https://astro.build/config
 export default defineConfig({
   ...getBaseUrl(),
-  integrations: [tailwind(), react()]
+  integrations: [tailwind(), react()],
+  vite: {
+    plugins: [
+      yaml(),
+    ],
+  }
 });
