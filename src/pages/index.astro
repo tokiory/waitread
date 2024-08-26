@@ -2,6 +2,7 @@
 import Layout from '@/layouts/Layout.astro';
 import IconSparkles from '@/components/icons/IconSparkles.astro';
 import { Browser } from '@/modules/browser/components/Browser.tsx';
+import { LINKS } from '@/modules/browser/data/links';
 ---
 
 <Layout class="flex flex-col" title="Wait, Read">
@@ -14,5 +15,5 @@ import { Browser } from '@/modules/browser/components/Browser.tsx';
 
   <!-- Maybe it should be inside the list? -->
 
-  <Browser client:load className="mt-4" />
+  <Browser links={LINKS} client:load className="mt-4" />
 </Layout>

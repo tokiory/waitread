@@ -3,6 +3,7 @@ import type { FC } from "react";
 import { clsx } from "clsx";
 import { useLinkControl } from "@/modules/browser/hooks/useLinkControl";
 import { useFilterContext } from "@/modules/browser/hooks/useFilterContext.ts";
+import type { LinkList } from "@/modules/browser/types/list.types";
 
 interface ReadListProps {
   className?: string;

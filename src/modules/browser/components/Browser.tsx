@@ -1,12 +1,14 @@
 import { BrowserLinkList } from "./BrowserLinkList.tsx";
 import type { FC } from "react";
-import { BrowserProvider } from "@/modules/browser/context/BrowserContext.tsx";
+import { BrowserLinkControlProvider } from "@/modules/browser/context/BrowserLinkControlContext.tsx";
 import { BrowserFilters } from "./BrowserFilters.tsx";
 import { BrowserFilterProvider } from "@/modules/browser/context/BrowserFilterContext.tsx";
 import { BrowserProgress } from "./BrowserProgress.tsx";
+import type { LinkList } from "@/modules/browser/types/list.types";
 
 interface BrowserProps {
   className?: string;
+  links: LinkList;
 }
 
 const BrowserInternal: FC<BrowserProps> = ({ className }) => {
@@ -19,12 +21,12 @@ const BrowserInternal: FC<BrowserProps> = ({ className }) => {
   );
 };
 
-export const Browser: FC<BrowserProps> = ({ className }) => {
+export const Browser: FC<BrowserProps> = ({ className, links }) => {
   return (
-    <BrowserProvider>
-      <BrowserFilterProvider>
-        <BrowserInternal className={className} />
+    <BrowserLinkControlProvider>
+      <BrowserFilterProvider links={links}>
+        <BrowserInternal links={links} className={className} />
       </BrowserFilterProvider>
-    </BrowserProvider>
+    </BrowserLinkControlProvider>
   );
 };

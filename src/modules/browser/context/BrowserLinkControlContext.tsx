@@ -12,19 +12,19 @@ import type {
   LinkStateMap,
 } from "@/modules/browser/types/list.types";
 
-type BrowserContextState = [
+type BrowserLinkControlContextState = [
   LinkStateMap,
   Dispatch<SetStateAction<LinkStateMap>>
 ];
 
 export const LINK_STATE_MAP_KEY = "link-state-map";
 
-export const BrowserContext = createContext<BrowserContextState>([
+export const BrowserLinkControlContext = createContext<BrowserLinkControlContextState>([
   new Map(),
   () => {},
 ]);
 
-export const BrowserProvider: FC<PropsWithChildren> = ({ children }) => {
+export const BrowserLinkControlProvider: FC<PropsWithChildren> = ({ children }) => {
   const contextState = useState<LinkStateMap>(() => new Map());
   const [_linkStateMap, setLinkStateMap] = contextState;
 
@@ -46,10 +46,10 @@ export const BrowserProvider: FC<PropsWithChildren> = ({ children }) => {
   }, [LINK_STATE_MAP_KEY]);
 
   return (
-    <BrowserContext.Provider
+    <BrowserLinkControlContext.Provider
       value={contextState}
     >
       {children}
-    </BrowserContext.Provider>
+    </BrowserLinkControlContext.Provider>
   );
 };

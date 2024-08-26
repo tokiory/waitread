@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { BrowserContext } from "@/modules/browser/context/BrowserContext";
-import { LINK_STATE_MAP_KEY } from "@/modules/browser/context/BrowserContext";
+import { BrowserLinkControlContext } from "@/modules/browser/context/BrowserLinkControlContext";
+import { LINK_STATE_MAP_KEY } from "@/modules/browser/context/BrowserLinkControlContext";
 
 interface LinkState {
   read: boolean;
@@ -13,7 +13,7 @@ const DEFAULT_LINK_STATE: LinkState = {
 }
 
 export const useLinkControl = () => {
-  const [linkStateMap, setLinkStateMap] = useContext(BrowserContext);
+  const [linkStateMap, setLinkStateMap] = useContext(BrowserLinkControlContext);
 
   const updateLink = (link: string, state: Partial<LinkState>) => {
     const oldState = linkStateMap.get(link) || DEFAULT_LINK_STATE;

@@ -3,7 +3,7 @@ import { useContext, useMemo, useState } from "react";
 import { BrowserFilterContext, INITIAL_FILTERS } from "@/modules/browser/context/BrowserFilterContext";
 
 export const useFilterContext = () => {
-  const [filters, setFilters] = useContext(BrowserFilterContext);
+  const {filters, setFilters, links} = useContext(BrowserFilterContext);
 
   const clearFilters = () => {
     setFilters(INITIAL_FILTERS);
@@ -11,7 +11,7 @@ export const useFilterContext = () => {
 
   const readlist = useMemo(() => {
     const { tags, query } = filters;
-    return LINKS
+    return links
     .filter((link) => link.title.toLowerCase().includes(query.toLowerCase()) || link.name.toLowerCase().includes(query.toLowerCase()))
     .filter((link) => [...tags].every(tag => link.tags.includes(tag)))
   }, [filters, LINKS]);

@@ -3,6 +3,7 @@ import { clsx } from "clsx";
 import type { ChangeEventHandler, FC } from "react";
 import { useFilterContext } from "../hooks/useFilterContext";
 import { Input } from "@/components/ui/input";
+import type { LinkList } from "@/modules/browser/types/list.types";
 
 interface ReadFiltersProps {
   className?: string;
