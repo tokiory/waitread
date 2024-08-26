@@ -6,6 +6,7 @@ import { BrowserFilterProvider } from "@/modules/browser/context/BrowserFilterCo
 import { BrowserProgress } from "./BrowserProgress.tsx";
 import type { LinkList } from "@/modules/browser/types/list.types";
 import { useFilterContext } from "@/modules/browser/hooks/useFilterContext.ts";
+import { Separator } from "@/components/ui/separator.tsx";
 
 interface BrowserProps {
   className?: string;
@@ -19,12 +20,12 @@ const BrowserInternal: FC<BrowserProps> = ({ className }) => {
 
   return (
     <div className={className}>
+      <BrowserFilters />
       {!isFocusMode && <BrowserProgress />}
-      <BrowserFilters className="mt-4" />
 
-      <div className="mt-4 border-b-2" />
+      <Separator className="mt-4" />
 
-      <BrowserLinkList className="mt-4" />
+      <BrowserLinkList className="mt-6" />
     </div>
   );
 };

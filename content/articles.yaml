@@ -311,3 +311,33 @@
   tags:
     - go
     - sql
+
+- name: Go database/sql tutorial
+  title: Overview
+  url: http://go-database-sql.org/overview.html
+  tags:
+    - go
+    - sql
+
+- name: Futurice
+  title: Gocurrency
+  url: https://www.futurice.com/blog/gocurrency
+  tags:
+    - go
+    - async
+
+- name: In Pursuit of Laziness
+  title: What Are Tokio and Async IO All About?
+  url: https://manishearth.github.io/blog/2018/01/10/whats-tokio-and-async-io-all-about/
+  tags:
+    - rust
+    - async
+
+- name: Phil Eaton
+  title: Zig, Rust, and other languages
+  url: https://notes.eatonphil.com/2024-03-15-zig-rust-and-other-languages.html
+  tags:
+    - rust
+    - zig
+    - go
+    - c

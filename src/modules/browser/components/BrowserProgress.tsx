@@ -10,7 +10,7 @@ export const BrowserProgress = () => {
     <div>
       <div className="mt-4 flex justify-between text-sm font-medium">
         <p>
-          Current progress: {readAmount} / {articlesContent.length}
+          Progress: {readAmount} / {articlesContent.length}
         </p>
         <p className="hidden">Level: Starter</p>
       </div>
