@@ -1,50 +1,42 @@
 ---
+import '@fontsource-variable/inter';
+
 interface Props {
 	title: string;
+  class?: string;
 }
 
-const { title } = Astro.props;
+const { title, class: className } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content="Tokiory's Readlist" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+  <body class:list={[
+        "max-w-[840px] p-4 py-12 mx-auto",
+        className
+  ]}>
 		<slot />
+    <footer class="mt-12 flex flex-col gap-1">
+      <div class="text-center text-sm text-muted-foreground">
+        Developed by <a href="https://github.com/tokiory" target="_blank">Tokiory</a>
+      </div>
+      <div class="text-center text-xs text-muted-foreground">
+        And a bunch of kittens 🐈 🐈 🐈
+      </div>
+    </footer>
 	</body>
 </html>
+
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+  html {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  }
 </style>

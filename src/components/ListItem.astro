@@ -1,0 +1,22 @@
+---
+import type { LinkListItem } from '../types/list.types';
+import { Checkbox } from './ui/checkbox';
+
+interface Props {
+	item: LinkListItem;
+}
+
+const { item } = Astro.props;
+---
+
+<li class="flex flex-col gap-3">
+  <a target="_blank" class="flex gap-2 items-center" href={item.url}>
+  <Checkbox checked={item.done} />
+  <div>
+    <span class="font-medium">{item.source}</span>:
+    <span>
+      {item.title}
+    </span>
+  </div>
+  </a>
+</li>
