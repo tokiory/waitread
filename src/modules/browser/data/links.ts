@@ -321,4 +321,28 @@ export const LINKS: LinkList = [
     url: "https://threedots.tech/post/repository-pattern-in-go/",
     tags: ["go"],
   },
+  {
+    name: "Diffen",
+    title: "Inner Join vs. Outer Join",
+    url: "https://www.diffen.com/difference/Inner_Join_vs_Outer_Join",
+    tags: ["sql"],
+  },
+  {
+    name: "Christian Emmer",
+    title: "Inner vs. Outer Joins",
+    url: "https://emmer.dev/blog/inner-vs.-outer-joins/",
+    tags: ["sql"],
+  },
+  {
+    name: "PostgreSQL Documentation",
+    title: "Database Roles",
+    url: "https://www.postgresql.org/docs/current/user-manag.html",
+    tags: ["sql", "postgresql"],
+  },
+  {
+    name: "Orhun's Blog",
+    title: "Zig Bits 0x4: Building an HTTP client/server from scratch",
+    url: "https://blog.orhun.dev/zig-bits-04/",
+    tags: ["zig"],
+  }
 ];
