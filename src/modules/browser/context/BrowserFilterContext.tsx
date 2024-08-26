@@ -9,9 +9,18 @@ import {
 } from "react";
 import type { LinkList } from "@/modules/browser/types/list.types";
 
-export const INITIAL_FILTERS = Object.freeze({
+interface InitialFilters {
+  tags: string[];
+  query: string;
+  isReadOnClick: boolean;
+  isFocusMode: boolean;
+}
+
+export const INITIAL_FILTERS: InitialFilters = Object.freeze({
   tags: [] as string[],
   query: "" as string,
+  isReadOnClick: false,
+  isFocusMode: false,
 });
 
 interface BrowserFilterContextState {

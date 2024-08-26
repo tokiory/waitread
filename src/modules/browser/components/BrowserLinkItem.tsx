@@ -1,7 +1,8 @@
 import type { LinkListItem } from "@/modules/browser/types/list.types";
 import { Checkbox } from "../../../components/ui/checkbox";
 import { Badge } from "../../../components/ui/badge";
-import { type FC, type FormEventHandler } from "react";
+import { type FC } from "react";
+import { useFilterContext } from "../hooks/useFilterContext";
 
 interface ReadItemProps {
   item: LinkListItem;
@@ -16,8 +17,19 @@ export const BrowserLinkItem: FC<ReadItemProps> = ({
   onTagClick,
   checked,
 }) => {
+  const {
+    filters: { isFocusMode, isReadOnClick },
+  } = useFilterContext();
+
   const handleChange = (checked: boolean) => {
     onChange(item.url, checked);
+  };
+
+
+  const handleLinkClick = () => {
+    if (isReadOnClick) {
+      handleChange(!checked);
+    }
   };
 
   return (
@@ -31,6 +43,7 @@ export const BrowserLinkItem: FC<ReadItemProps> = ({
         <a
           target="_blank"
           className="flex flex-col sm:flex-row transition-all hover:underline"
+          onClick={handleLinkClick}
           href={item.url}
         >
           <span className="font-medium shrink-0">{item.name}</span>
@@ -38,17 +51,19 @@ export const BrowserLinkItem: FC<ReadItemProps> = ({
           <span>{item.title}</span>
         </a>
       </div>
-      <div className="flex ml-6 gap-2">
-        {item.tags.map((tag, idx) => (
-          <Badge
-            onClick={() => onTagClick(tag)}
-            key={`${tag}-${idx}`}
-            className="w-fit cursor-pointer"
-          >
-            {tag}
-          </Badge>
-        ))}
-      </div>
+      {!isFocusMode && (
+        <div className="flex ml-6 gap-2">
+          {item.tags.map((tag, idx) => (
+            <Badge
+              onClick={() => onTagClick(tag)}
+              key={`${tag}-${idx}`}
+              className="w-fit cursor-pointer"
+            >
+              {tag}
+            </Badge>
+          ))}
+        </div>
+      )}
     </li>
   );
 };
