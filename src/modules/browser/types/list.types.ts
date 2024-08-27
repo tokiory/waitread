@@ -4,6 +4,7 @@ export interface LinkListItem {
   url: string;
   tags: string[];
   status?: string;
+  topic?: string;
 }
 
 export type LinkList = LinkListItem[];

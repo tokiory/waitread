@@ -1,7 +1,8 @@
 - name: "ByteGoblin.io"
+  topic: "go"
   title: "Explaining Common I/O Patterns in Go"
   url: "https://bytegoblin.io/blog/explaining-common-i-o-patterns-in-go"
-  tags: ["go"]
+  tags: []
 
 - name: "Stanford Education"
   title: "How Does the Internet Work?"
@@ -51,7 +52,7 @@
 - name: "Evil Martians"
   title: "OKLCH in CSS: why we moved from RGB and HSL"
   url: "https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl"
-  tags: ["misc"]
+  tags: ["colors"]
 
 - name: "Sky.pro"
   title: "Понимаем JS идиому var self = this: использование и цель"
@@ -61,7 +62,7 @@
 - name: "Teamten"
   title: "Java for Everything"
   url: "https://www.teamten.com/lawrence/writings/java-for-everything.html"
-  tags: ["misc"]
+  tags: ["java"]
 
 - name: "Habr"
   title: "Как работает JS: обзор движка, механизмов времени выполнения, стека вызовов"
@@ -69,24 +70,27 @@
   tags: ["javascript"]
 
 - name: "Alex Edwards"
+  topic: "go"
   title: "Demystifying function parameters in Go"
   url: "https://www.alexedwards.net/blog/demystifying-function-parameters-in-go"
-  tags: ["go"]
+  tags: []
 
 - name: "Scaler"
   title: "Threads in Operating System"
   url: "https://www.scaler.com/topics/operating-system/threads-in-operating-system/"
-  tags: ["system"]
+  tags: ["os", "cs"]
 
 - name: "Go FAQ"
+  topic: "go"
   title: "Go FAQ"
   url: "https://go.dev/doc/faq#Design"
-  tags: ["go"]
+  tags: []
 
 - name: "Dave Cheney"
+  topic: go
   title: "How the Go runtime implements maps efficiently (without generics)"
   url: "https://dave.cheney.net/2018/05/29/how-the-go-runtime-implements-maps-efficiently-without-generics"
-  tags: ["go"]
+  tags: []
 
 - name: "Jenkov"
   title: "Concurrency Models"
@@ -95,28 +99,33 @@
 
 - name: "Dave Cheney"
   title: "If a map isn’t a reference variable, what is it?"
+  topic: go
   url: "https://dave.cheney.net/2017/04/30/if-a-map-isnt-a-reference-variable-what-is-it"
-  tags: ["go"]
+  tags: []
 
 - name: "Dave Cheney"
   title: "Should methods be declared on T or *T"
+  topic: go
   url: "https://dave.cheney.net/2016/03/19/should-methods-be-declared-on-t-or-t"
-  tags: ["go"]
+  tags: []
 
 - name: "Airs – Ian Lance Taylor"
   title: "Go Interfaces"
+  topic: go
   url: "https://www.airs.com/blog/archives/277"
-  tags: ["go"]
+  tags: []
 
 - name: "Chris Siebenmann"
   title: "Learning about Go's unaddressable values and slicing"
+  topic: go
   url: "https://utcc.utoronto.ca/~cks/space/blog/programming/GoUnaddressableSlice"
-  tags: ["go"]
+  tags: []
 
 - name: "Sazak.io"
+  topic: go
   title: "Visual Guide to Slices in Go"
   url: "https://sazak.io/articles/visual-guide-to-slices-in-go-2024-03-25"
-  tags: ["go"]
+  tags: []
 
 - name: "Habr"
   title: "CORS для чайников: история возникновения, как устроен и оптимальные методы работы"
@@ -130,9 +139,10 @@
   tags: ["network"]
 
 - name: "Victoria Metrics"
+  topic: go
   title: "How Go Arrays Work and Get Tricky with For-Range"
   url: "https://victoriametrics.com/blog/go-array/"
-  tags: ["go"]
+  tags: []
 
 - name: "CS 225"
   title: "Stack and Heap Memory"
@@ -151,39 +161,46 @@
 
 - name: "Medium"
   title: "Crafting a Custom Hashmap: A Golang Odyssey"
+  topic: go
   url: "https://blog.stackademic.com/crafting-a-custom-hashmap-a-golang-odyssey-00fdfde9a775"
-  tags: ["go"]
+  tags: []
   status: "Too Hard"
 
 - name: "Alex Edwards"
+  topic: "go"
   title: "Organising Database Access in Go"
   url: "https://www.alexedwards.net/blog/organising-database-access"
-  tags: ["go"]
+  tags: []
 
 - name: "Medium"
+  topic: "go"
   title: "Dependency Injection in Go"
   url: "https://medium.com/avenue-tech/dependency-injection-in-go-35293ef7b6"
-  tags: ["go"]
+  tags: []
 
 - name: "Dave Cheney"
+  topic: "go"
   title: "Empty Struct"
   url: "https://dave.cheney.net/2014/03/25/the-empty-struct"
-  tags: ["go"]
+  tags: []
 
 - name: "Alexey Gronskiy"
+  topic: "go"
   title: "Summary to the difference between T and *T method sets in Go"
   url: "https://gronskiy.com/posts/2020-04-golang-pointer-vs-value-methods/"
-  tags: ["go"]
+  tags: []
 
 - name: "Quirksmode"
+  topic: "javascript"
   title: "The this keyword"
   url: "https://www.quirksmode.org/js/this.html"
-  tags: ["javascript"]
+  tags: []
 
 - name: "Eloquent Javascript"
+  topic: "javascript"
   title: "The Secret Life of Objects"
   url: "https://eloquentjavascript.net/06_object.html"
-  tags: ["javascript"]
+  tags: []
 
 - name: "Web.dev"
   title: "How browsers work"
@@ -206,34 +223,40 @@
   tags: ["network"]
 
 - name: "Log Rocket"
+  topic: "go"
   title: "Dockerizing Go Application"
   url: "https://blog.logrocket.com/dockerizing-go-application/"
-  tags: ["go"]
+  tags: []
 
 - name: "BetterStack"
+  topic: "go"
   title: "Logging in Go"
   url: "https://betterstack.com/community/guides/logging/logging-in-go/"
-  tags: ["go"]
+  tags: []
 
 - name: "Digital Ocean"
+  topic: "go"
   title: "How To Use Contexts in Go"
   url: "https://www.digitalocean.com/community/tutorials/how-to-use-contexts-in-go"
-  tags: ["go"]
+  tags: []
 
 - name: "Drstearns"
   title: "Middleware Patterns in Go"
+  topic: "go"
   url: "https://drstearns.github.io/tutorials/gomiddleware/"
-  tags: ["go"]
+  tags: []
 
 - name: "Alex Edwards"
+  topic: "go"
   title: "Making and Using HTTP Middleware"
   url: "https://www.alexedwards.net/blog/making-and-using-middleware"
-  tags: ["go"]
+  tags: []
 
 - name: "Medium"
+  topic: "go"
   title: "Auto Rebuilding Go Programs — With Docker, Glide & Fresh"
   url: "https://craig-childs.medium.com/hot-reloading-go-programs-with-docker-glide-fresh-d5f1acb63f72"
-  tags: ["go"]
+  tags: []
 
 - name: "Harrk.dev"
   title: "Live Reloading A Go Application With Docker"
@@ -246,24 +269,28 @@
   tags: ["docker", "go"]
 
 - name: "Choly's Blog"
+  topic: "go"
   title: "Go: Composable http.Handler"
   url: "https://choly.ca/post/go-experiments-with-handler/"
-  tags: ["go"]
+  tags: []
 
 - name: "The Ethically-Trained Programmer"
+  topic: "go"
   title: "Creating Domain Specific Error Helpers in Go With errors.As"
   url: "https://blog.carlana.net/post/2020/working-with-errors-as/"
-  tags: ["go"]
+  tags: []
 
 - name: "go.dev"
+  topic: "go"
   title: "Error handling and Go"
   url: "https://go.dev/blog/error-handling-and-go"
-  tags: ["go"]
+  tags: []
 
 - name: "Threedots"
+  topic: "go"
   title: "The Repository pattern in Go: a painless way to simplify your service logic"
   url: "https://threedots.tech/post/repository-pattern-in-go/"
-  tags: ["go"]
+  tags: []
 
 - name: "Diffen"
   title: "Inner Join vs. Outer Join"
@@ -281,56 +308,57 @@
   tags: ["sql", "postgresql"]
 
 - name: "Orhun's Blog"
+  topic: zig
   title: "Zig Bits 0x4: Building an HTTP client/server from scratch"
   url: "https://blog.orhun.dev/zig-bits-04/"
-  tags: ["zig"]
+  tags: []
 
 - name: hrishikeshpathak.com
+  topic: go
   title: A Better Way to Share Database Connection in Golang
   url: https://hrishikeshpathak.com/tips/better-way-share-database-connection-golang/
-  tags:
-    - go
+  tags: []
 
 - name: Alex Edwards
   title: An Introduction to using SQL Databases in Go
+  topic: go
   url: https://www.alexedwards.net/blog/introduction-to-using-sql-databases-in-go
   tags:
-    - go
     - sql
 
 - name: App Master
+  topic: go
   title: Working with Databases in Go
   url: https://appmaster.io/blog/databases-in-go
   tags:
-    - go
     - sql
 
 - name: Coding Explorations
+  topic: go
   title: Leveraging Go's Concurrency for High-Performance Database Insertions
   url: https://www.codingexplorations.com/blog/leveraging-gos-concurrency-for-high-performance-database-insertions
   tags:
-    - go
     - sql
 
 - name: Go database/sql tutorial
+  topic: go
   title: Overview
   url: http://go-database-sql.org/overview.html
   tags:
-    - go
     - sql
 
 - name: Futurice
+  topic: go
   title: Gocurrency
   url: https://www.futurice.com/blog/gocurrency
   tags:
-    - go
     - async
 
 - name: In Pursuit of Laziness
+  topic: rust
   title: What Are Tokio and Async IO All About?
   url: https://manishearth.github.io/blog/2018/01/10/whats-tokio-and-async-io-all-about/
   tags:
-    - rust
     - async
 
 - name: Phil Eaton
@@ -341,3 +369,22 @@
     - zig
     - go
     - c
+
+- name: hrishikeshpathak.com
+  topic: go
+  title: What is Method and Pointer Indirection in Golang
+  url: https://hrishikeshpathak.com/blog/what-is-method-and-pointer-indirection-in-golang/
+  tags: []
+
+- name: Victoria Metrics
+  topic: go
+  title: "Go Maps Explained: How Key-Value Pairs Are Actually Stored"
+  url: https://victoriametrics.com/blog/go-map/
+  tags: []
+
+- name: The Go Blog
+  topic: go
+  title: "Go Concurrency Patterns: Pipelines and cancellation"
+  url: https://go.dev/blog/pipelines
+  tags:
+    - async
