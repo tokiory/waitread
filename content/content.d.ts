@@ -5,6 +5,7 @@ interface LinkListItem {
   tags: string[];
   status?: string;
   topic?: string;
+  favorite?: boolean;
 }
 
 // Specify the file extension you want to import

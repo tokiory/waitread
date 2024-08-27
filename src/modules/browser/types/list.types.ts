@@ -5,6 +5,7 @@ export interface LinkListItem {
   tags: string[];
   status?: string;
   topic?: string;
+  favorite?: boolean;
 }
 
 export type LinkList = LinkListItem[];

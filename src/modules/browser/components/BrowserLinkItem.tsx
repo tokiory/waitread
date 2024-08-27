@@ -1,8 +1,9 @@
 import type { LinkListItem } from "@/modules/browser/types/list.types";
-import { Checkbox } from "../../../components/ui/checkbox";
-import { Badge } from "../../../components/ui/badge";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Badge } from "@/components/ui/badge";
 import { type FC } from "react";
-import { useFilterContext } from "../hooks/useFilterContext";
+import { useFilterContext } from "@/modules/browser/hooks/useFilterContext";
+import { clsx } from "clsx";
 
 interface ReadItemProps {
   item: LinkListItem;
@@ -18,7 +19,7 @@ export const BrowserLinkItem: FC<ReadItemProps> = ({
   checked,
 }) => {
   const {
-    filters: { isFocusMode, isReadOnClick },
+    filters: { isFocusMode, isReadOnClick, isFavoriteVisible },
   } = useFilterContext();
 
   const handleChange = (checked: boolean) => {
@@ -31,6 +32,8 @@ export const BrowserLinkItem: FC<ReadItemProps> = ({
     }
   };
 
+  const isFavorite = item?.favorite && isFavoriteVisible;
+
   return (
     <li className="flex flex-col md:flex-row md:justify-between md:items-center border-b px-1 py-3 sm:px-2 md:p-0 md:border-none gap-2">
       <div className="flex gap-2 items-start">
@@ -41,7 +44,10 @@ export const BrowserLinkItem: FC<ReadItemProps> = ({
         />
         <a
           target="_blank"
-          className="flex flex-col sm:block transition-all hover:underline"
+          className={clsx(
+            "flex flex-col sm:block transition-all hover:underline",
+            isFavorite && "text-yellow-600 dark:text-yellow-500"
+          )}
           onClick={handleLinkClick}
           href={item.url}
         >

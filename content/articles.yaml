@@ -2,47 +2,56 @@
   topic: "go"
   title: "Explaining Common I/O Patterns in Go"
   url: "https://bytegoblin.io/blog/explaining-common-i-o-patterns-in-go"
+  favorite: true
   tags: []
 
 - name: "Stanford Education"
   title: "How Does the Internet Work?"
   url: "https://web.stanford.edu/class/msande91si/www-spr04/readings/week1/InternetWhitepaper.htm"
-  tags: ["network"]
+  topic: "network"
+  tags: []
 
 - name: "Cloudflare"
   title: "What is DNS? | How DNS works"
   url: "https://www.cloudflare.com/en-gb/learning/dns/what-is-dns/"
-  tags: ["network"]
+  topic: "network"
+  tags: []
 
 - name: "Cloudflare"
   title: "What is a domain name? | Domain name vs. URL"
   url: "https://www.cloudflare.com/en-gb/learning/dns/glossary/what-is-a-domain-name/"
-  tags: ["network"]
+  topic: "network"
+  tags: []
 
 - name: "MDN"
   title: "What is a web server?"
   url: "https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server"
-  tags: ["network"]
+  topic: "network"
+  tags: []
 
 - name: "Dev.to"
   title: "Fundamentals of REST API"
   url: "https://dev.to/cassiocappellari/fundamentals-of-rest-api-2nag"
-  tags: ["network"]
+  topic: "network"
+  tags: []
 
 - name: "Wallarm"
   title: "What Is GRPC? Meaning, Architecture, Advantages"
   url: "https://www.wallarm.com/what/the-concept-of-grpc"
-  tags: ["network"]
+  topic: "network"
+  tags: []
 
 - name: "W3Schools"
   title: "XML Soap"
   url: "https://www.w3schools.com/xml/xml_soap.asp"
-  tags: ["network"]
+  topic: "network"
+  tags: []
 
 - name: "CS.fyi"
   title: "How Does Intenet Work"
   url: "https://cs.fyi/guide/how-does-internet-work"
-  tags: ["network"]
+  topic: "network"
+  tags: []
 
 - name: "Meat.io"
   title: "Цветовая схема OKSolar"
@@ -55,9 +64,10 @@
   tags: ["colors"]
 
 - name: "Sky.pro"
+  topic: "javascript"
   title: "Понимаем JS идиому var self = this: использование и цель"
   url: "https://sky.pro/wiki/javascript/ponimaem-js-idiomu-var-self-this-ispolzovanie-i-tsel/"
-  tags: ["javascript"]
+  tags: []
 
 - name: "Teamten"
   title: "Java for Everything"
@@ -65,9 +75,10 @@
   tags: ["java"]
 
 - name: "Habr"
+  topic: "javascript"
   title: "Как работает JS: обзор движка, механизмов времени выполнения, стека вызовов"
   url: "https://habr.com/ru/companies/ruvds/articles/337042/"
-  tags: ["javascript"]
+  tags: []
 
 - name: "Alex Edwards"
   topic: "go"
@@ -130,13 +141,15 @@
 - name: "Habr"
   title: "CORS для чайников: история возникновения, как устроен и оптимальные методы работы"
   url: "https://habr.com/ru/companies/macloud/articles/553826/"
-  tags: ["network"]
+  topic: "network"
+  tags: []
   status: "Не дочитан"
 
 - name: "MDN"
   title: "Cross-Origin Resource Sharing (CORS)"
   url: "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS"
-  tags: ["network"]
+  topic: "network"
+  tags: []
 
 - name: "Victoria Metrics"
   topic: go
@@ -176,7 +189,8 @@
   topic: "go"
   title: "Dependency Injection in Go"
   url: "https://medium.com/avenue-tech/dependency-injection-in-go-35293ef7b6"
-  tags: []
+  tags:
+    - pattern
 
 - name: "Dave Cheney"
   topic: "go"
@@ -215,12 +229,14 @@
 - name: "Destroy All Software"
   title: "Network Protocols For Anyone Who Knows A Programming Language"
   url: "https://www.destroyallsoftware.com/compendium/network-protocols?share_key=97d3ba4c24d21147"
-  tags: ["network"]
+  topic: "network"
+  tags: []
 
 - name: "Smashing Magazine"
   title: "HTTP/3 From A To Z: Core Concepts"
   url: "https://www.smashingmagazine.com/2021/08/http3-core-concepts-part1/"
-  tags: ["network"]
+  topic: "network"
+  tags: []
 
 - name: "Log Rocket"
   topic: "go"
@@ -244,13 +260,16 @@
   title: "Middleware Patterns in Go"
   topic: "go"
   url: "https://drstearns.github.io/tutorials/gomiddleware/"
-  tags: []
+  tags:
+    - http
 
 - name: "Alex Edwards"
   topic: "go"
   title: "Making and Using HTTP Middleware"
   url: "https://www.alexedwards.net/blog/making-and-using-middleware"
-  tags: []
+  tags:
+    - http
+  favorite: true
 
 - name: "Medium"
   topic: "go"
@@ -272,7 +291,8 @@
   topic: "go"
   title: "Go: Composable http.Handler"
   url: "https://choly.ca/post/go-experiments-with-handler/"
-  tags: []
+  tags:
+    - http
 
 - name: "The Ethically-Trained Programmer"
   topic: "go"
@@ -311,7 +331,8 @@
   topic: zig
   title: "Zig Bits 0x4: Building an HTTP client/server from scratch"
   url: "https://blog.orhun.dev/zig-bits-04/"
-  tags: []
+  tags:
+    - http
 
 - name: hrishikeshpathak.com
   topic: go
@@ -321,6 +342,7 @@
 
 - name: Alex Edwards
   title: An Introduction to using SQL Databases in Go
+  favorite: true
   topic: go
   url: https://www.alexedwards.net/blog/introduction-to-using-sql-databases-in-go
   tags:
@@ -388,3 +410,36 @@
   url: https://go.dev/blog/pipelines
   tags:
     - async
+
+- name: slar
+  title: The sheer insanity of interfaces and nil in Go
+  url: https://slar.se/
+  topic: go
+  tags: []
+
+- name: Liquid Web
+  title: What Are CPU Cores vs Threads?
+  url: https://www.liquidweb.com/blog/difference-cpu-cores-thread/
+  tags:
+    - os
+
+- name: Habr
+  title: "Атомики в Go: особенности внутренней реализации"
+  url: https://habr.com/ru/articles/744822/
+  topic: go
+  tags:
+    - async
+
+- name: Medium
+  title: "Common mistakes when using golang’s sync.WaitGroup"
+  topic: go
+  tags:
+    - async
+  url: https://leangaurav.medium.com/common-mistakes-when-using-golangs-sync-waitgroup-88188556ca54
+
+- name: Medium
+  title: "Top 3 Design Patterns for a Large Go Codebase"
+  topic: go
+  tags:
+    - pattern
+  url: https://medium.com/@opheliaandcat/top-3-design-patterns-for-a-large-go-codebase-79a324003b47

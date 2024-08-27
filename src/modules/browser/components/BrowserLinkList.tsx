@@ -32,7 +32,7 @@ export const BrowserLinkList: FC<ReadListProps> = ({ className }) => {
   return (
     <div className={className}>
       <ul className="flex flex-col gap-2">
-        {topicsMap.get(DEFAULT_TOPIC)!.map((item, idx) => (
+        {topicsMap.get(DEFAULT_TOPIC)?.map((item, idx) => (
           <BrowserLinkItem
             onChange={(link, read) => updateLink(link, { read })}
             onTagClick={handleTagClick}
@@ -42,9 +42,10 @@ export const BrowserLinkList: FC<ReadListProps> = ({ className }) => {
           />
         ))}
       </ul>
-      {specificTopicLinks.map(([topic, links]) => (
+      {specificTopicLinks.map(([topic, links], idx) => (
         <BrowserLinkTopic
           folded={hiddenTopics.includes(topic)}
+          key={`${topic}-${idx}`}
           onToggle={toggleTopic}
           name={topic}
         >
