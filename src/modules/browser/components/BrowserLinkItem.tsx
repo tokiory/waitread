@@ -28,7 +28,7 @@ export const BrowserLinkItem: FC<ReadItemProps> = ({
 
   const handleLinkClick = () => {
     if (isReadOnClick) {
-      handleChange(!checked);
+      handleChange(true);
     }
   };
 
