@@ -443,3 +443,31 @@
   tags:
     - pattern
   url: https://medium.com/@opheliaandcat/top-3-design-patterns-for-a-large-go-codebase-79a324003b47
+
+- name: Baeldung
+  title: What Is the “N+1 Select Problem”?
+  url: https://www.baeldung.com/cs/orm-n-plus-one-select-problem
+  tags:
+    - sql
+
+- name: FreeCodeCamp
+  title: How to Avoid the N+1 Query Problem in GraphQL and REST APIs [with Benchmarks]
+  url: https://www.freecodecamp.org/news/n-plus-one-query-problem/
+  tags:
+    - sql
+    - graphql
+    - rest
+
+- name: Coding Explorations
+  topic: go
+  title: "Unraveling CGo: Bridging the Gap Between Go and C"
+  url: https://www.codingexplorations.com/blog/unraveling-cgo-bridging-the-gap-between-go-and-c
+  tags:
+    - c
+
+- name: Dev.to
+  topic: go
+  title: RPC Implementation in Go
+  tags:
+    - rpc
+  url: https://dev.to/karankumarshreds/go-rpc-implementation-4731
