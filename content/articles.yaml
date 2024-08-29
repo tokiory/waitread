@@ -471,3 +471,25 @@
   tags:
     - rpc
   url: https://dev.to/karankumarshreds/go-rpc-implementation-4731
+
+- name: Medium
+  topic: go
+  title: How to use Go with MongoDB
+  url: https://medium.com/deliveryherotechhub/how-to-use-go-with-mongodb-72963c8cebbc
+  tags:
+    - mongodb
+
+- name: MongoDB
+  title: JSON and BSON
+  url: https://www.mongodb.com/resources/basics/json-and-bson
+  tags:
+    - mongodb
+    - json
+    - bson
+
+- name: MongoDB
+  title: Explaining BSON with Examples
+  url: https://www.mongodb.com/resources/languages/bson
+  tags:
+    - mongodb
+    - bson
