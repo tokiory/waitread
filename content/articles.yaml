@@ -493,3 +493,11 @@
   tags:
     - mongodb
     - bson
+
+- name: "Gopherfest 2015 | Go Proverbs with Rob Pike"
+  title: "Youtube"
+  url: https://www.youtube.com/watch?v=PAAkCSZUG1c&t=168s
+  topic: go
+  tags:
+    - video
+    - conference
