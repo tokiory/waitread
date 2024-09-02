@@ -18,10 +18,12 @@ jobs:
   yamllint:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout your repository using git
+        uses: actions/checkout@v4
       - name: yaml-lint
         uses: ibiqlik/action-yamllint@v3
         with:
-          file_or_dir: ./content
+          file_or_dir: content
           config_data: |
             extends: default
             rules:
