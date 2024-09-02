@@ -1,4 +1,4 @@
-import { useContext, useMemo } from "react";
+import { useCallback, useContext, useMemo } from "react";
 import {
   BrowserFilterContext,
   INITIAL_FILTERS,
@@ -51,9 +51,9 @@ export const useFilterContext = () => {
     return [...topicsMap.keys()];
   }, [topicsMap]);
 
-  const updateFilters = (newFilters: Partial<typeof filters>) => {
+  const updateFilters = useCallback((newFilters: Partial<typeof filters>) => {
     setFilters((prev) => ({ ...prev, ...newFilters }));
-  };
+  }, [])
 
   const toggleTag = (tag: string) => {
     let tags: string[];

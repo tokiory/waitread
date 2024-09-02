@@ -1,5 +1,5 @@
 import { BrowserLinkList } from "./BrowserLinkList.tsx";
-import type { FC } from "react";
+import { type FC, useEffect } from "react";
 import { BrowserLinkControlProvider } from "@/modules/browser/context/BrowserLinkControlContext.tsx";
 import { BrowserFilters } from "./BrowserFilters.tsx";
 import { BrowserFilterProvider } from "@/modules/browser/context/BrowserFilterContext.tsx";
@@ -16,7 +16,14 @@ interface BrowserProps {
 const BrowserInternal: FC<BrowserProps> = ({ className }) => {
   const {
     filters: { isFocusMode },
+    updateFilters,
   } = useFilterContext();
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    console.log(params);
+    updateFilters({ query: params.get("q") || "" });
+  }, [updateFilters]);
 
   return (
     <div className={className}>
