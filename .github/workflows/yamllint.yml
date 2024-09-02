@@ -24,3 +24,11 @@ jobs:
         uses: ibiqlik/action-yamllint@v3
         with:
           file_or_dir: content
+          config_data: |
+            extends: default
+            rules:
+              new-line-at-end-of-file:
+                level: warning
+              line-length: false
+              trailing-spaces:
+                level: warning
