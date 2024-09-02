@@ -501,3 +501,46 @@
   tags:
     - video
     - conference
+
+- name: What’s the difference between a stack and a heap?
+  title: "Programmer Interview"
+  url: https://www.programmerinterview.com/data-structures/difference-between-stack-and-heap/
+  tags:
+    - cs
+
+- name: "Setting Up a Pretty and Minimal macOS Terminal"
+  title: "Emre Demir"
+  url: https://aemdemir.com/posts/setting-up-a-pretty-and-minimal-macos-terminal/
+  tags:
+    - terminal
+    - misc
+
+- name: What and where are the stack and heap?
+  title: Stack Overflow
+  url: https://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap
+  tags:
+    - cs
+
+- name: What is the difference between concurrency and parallelism?
+  title: Stack Overflow
+  url: https://stackoverflow.com/questions/1050222/what-is-the-difference-between-concurrency-and-parallelism
+  tags:
+    - cs
+
+- name: What is the difference between a process and a thread?
+  title: Stack Overflow
+  url: https://stackoverflow.com/questions/200469/what-is-the-difference-between-a-process-and-a-thread
+  tags:
+    - cs
+
+- name: Inversion of Control Containers and the Dependency Injection pattern
+  title: Martin Fowler
+  url: https://martinfowler.com/articles/injection.html
+  tags:
+    - pattern
+
+- name: "How to Use Maps Safely in Go"
+  title: Hackernoon
+  url: https://hackernoon.com/how-to-use-maps-safely-in-go
+  topic: go
+  tags: []
