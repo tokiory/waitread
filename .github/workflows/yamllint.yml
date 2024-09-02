@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Lint all YAML files
 
 on:
   # Trigger the workflow every time you push to the `main` branch
@@ -15,26 +15,12 @@ permissions:
   id-token: write
 
 jobs:
-  build:
-    needs: yamllint
+  yamllint:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
-      - name: Install, build, and upload your site
-        uses: withastro/action@v2
+      - name: yaml-lint
+        uses: ibiqlik/action-yamllint@v3
         with:
-          path: .
-          node-version: 20
-          package-manager: pnpm@latest
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          file_or_dir: content
