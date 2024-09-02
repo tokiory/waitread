@@ -15,6 +15,22 @@ permissions:
   id-token: write
 
 jobs:
+  yamllint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: yaml-lint
+        uses: ibiqlik/action-yamllint@v3
+        with:
+          file_or_dir: content
+          config_data: |
+            extends: default
+            rules:
+              new-line-at-end-of-file:
+                level: warning
+              line-length: disable
+              trailing-spaces:
+                level: warning
+
   build:
     needs: yamllint
     runs-on: ubuntu-latest
