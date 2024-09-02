@@ -494,53 +494,53 @@
     - mongodb
     - bson
 
-- name: "Gopherfest 2015 | Go Proverbs with Rob Pike"
-  title: "Youtube"
+- name: "Youtube"
+  title: "Gopherfest 2015 | Go Proverbs with Rob Pike"
   url: https://www.youtube.com/watch?v=PAAkCSZUG1c&t=168s
   topic: go
   tags:
     - video
     - conference
 
-- name: What’s the difference between a stack and a heap?
-  title: "Programmer Interview"
+- name: "Programmer Interview"
+  title: What’s the difference between a stack and a heap?
   url: https://www.programmerinterview.com/data-structures/difference-between-stack-and-heap/
   tags:
     - cs
 
-- name: "Setting Up a Pretty and Minimal macOS Terminal"
-  title: "Emre Demir"
+- name: "Emre Demir"
+  title: "Setting Up a Pretty and Minimal macOS Terminal"
   url: https://aemdemir.com/posts/setting-up-a-pretty-and-minimal-macos-terminal/
   tags:
     - terminal
     - misc
 
-- name: What and where are the stack and heap?
-  title: Stack Overflow
+- title: What and where are the stack and heap?
+  name: Stack Overflow
   url: https://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap
   tags:
     - cs
 
-- name: What is the difference between concurrency and parallelism?
-  title: Stack Overflow
+- title: What is the difference between concurrency and parallelism?
+  name: Stack Overflow
   url: https://stackoverflow.com/questions/1050222/what-is-the-difference-between-concurrency-and-parallelism
   tags:
     - cs
 
-- name: What is the difference between a process and a thread?
-  title: Stack Overflow
+- title: What is the difference between a process and a thread?
+  name: Stack Overflow
   url: https://stackoverflow.com/questions/200469/what-is-the-difference-between-a-process-and-a-thread
   tags:
     - cs
 
-- name: Inversion of Control Containers and the Dependency Injection pattern
-  title: Martin Fowler
+- title: Inversion of Control Containers and the Dependency Injection pattern
+  name: Martin Fowler
   url: https://martinfowler.com/articles/injection.html
   tags:
     - pattern
 
-- name: "How to Use Maps Safely in Go"
-  title: Hackernoon
+- title: "How to Use Maps Safely in Go"
+  name: Hackernoon
   url: https://hackernoon.com/how-to-use-maps-safely-in-go
   topic: go
   tags: []
