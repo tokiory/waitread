@@ -545,21 +545,22 @@
   topic: go
   tags: []
 
-- title: Bitfield Consulting
-  name: The adapter pattern in Go
+- name: Bitfield Consulting
+  title: The adapter pattern in Go
   url: https://bitfieldconsulting.com/posts/adapter
   topic: go
   tags:
     - pattern
 
-- title: dwarvesf
-  name: Common design patterns in Golang - Part 1
+- name: dwarvesf
+  title: Common design patterns in Golang - Part 1
   url: https://dwarvesf.hashnode.dev/common-design-patterns-in-golang-part-1
   topic: go
   tags:
     - pattern
-- title: Matthias Bruns
-  name: Golang Design Patterns - Overview
+
+- name: Matthias Bruns
+  title: Golang Design Patterns - Overview
   url: https://blog.matthiasbruns.com/golang-design-patterns-overview
   topic: go
   tags:
