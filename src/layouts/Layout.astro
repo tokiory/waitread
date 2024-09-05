@@ -29,11 +29,11 @@ const { title, class: className } = Astro.props;
 		<title>{title}</title>
 	</head>
   <body class:list={[
-        "max-w-[840px] p-4 py-12 mx-auto",
+        "max-w-[840px] min-h-screen p-4 py-12 mx-auto",
         className
   ]}>
 		<slot />
-    <Footer />
+    <Footer class="mt-auto" />
 	</body>
 </html>
 

@@ -1,6 +1,5 @@
 import { BrowserLinkItem } from "./BrowserLinkItem.tsx";
 import { useState, type FC } from "react";
-import { clsx } from "clsx";
 import { useLinkControl } from "@/modules/browser/hooks/useLinkControl";
 import {
   DEFAULT_TOPIC,

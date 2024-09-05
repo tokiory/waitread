@@ -1,16 +1,17 @@
 import { BrowserLinkList } from "./BrowserLinkList.tsx";
-import { type FC, useEffect } from "react";
+import { type FC, useEffect, useState } from "react";
 import { BrowserLinkControlProvider } from "@/modules/browser/context/BrowserLinkControlContext.tsx";
 import { BrowserFilters } from "./BrowserFilters.tsx";
 import { BrowserFilterProvider } from "@/modules/browser/context/BrowserFilterContext.tsx";
 import { BrowserProgress } from "./BrowserProgress.tsx";
-import type { LinkList } from "@/modules/browser/types/list.types";
 import { useFilterContext } from "@/modules/browser/hooks/useFilterContext.ts";
 import { Separator } from "@/components/ui/separator.tsx";
+import { useReadlist } from "@/hooks/useReadlist.ts";
+import { BrowserLoader } from "./BrowserLoader.tsx";
+import { clsx } from "clsx";
 
 interface BrowserProps {
   className?: string;
-  links: LinkList;
 }
 
 const BrowserInternal: FC<BrowserProps> = ({ className }) => {
@@ -21,12 +22,11 @@ const BrowserInternal: FC<BrowserProps> = ({ className }) => {
 
   useEffect(() => {
     const params = new URLSearchParams(location.search);
-    console.log(params);
     updateFilters({ query: params.get("q") || "" });
   }, [updateFilters]);
 
   return (
-    <div className={className}>
+    <div className={clsx("mb-12", className)}>
       <BrowserFilters />
       {!isFocusMode && <BrowserProgress />}
 
@@ -37,11 +37,16 @@ const BrowserInternal: FC<BrowserProps> = ({ className }) => {
   );
 };
 
-export const Browser: FC<BrowserProps> = ({ className, links }) => {
+export const Browser: FC<BrowserProps> = ({ className }) => {
+  const readlist = useReadlist();
   return (
     <BrowserLinkControlProvider>
-      <BrowserFilterProvider links={links}>
-        <BrowserInternal links={links} className={className} />
+      <BrowserFilterProvider links={readlist}>
+        {readlist.length ? (
+          <BrowserInternal className={className} />
+        ) : (
+          <BrowserLoader />
+        )}
       </BrowserFilterProvider>
     </BrowserLinkControlProvider>
   );

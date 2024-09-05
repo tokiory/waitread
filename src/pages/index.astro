@@ -2,8 +2,12 @@
 import Layout from '@/layouts/Layout.astro';
 import IconSparkles from '@/components/icons/IconSparkles.astro';
 import { Browser } from '@/modules/browser/components/Browser.tsx';
-import articlesContent from '#/articles.yaml';
 ---
+
+<script>
+  import { loadIcon } from "@iconify/react";
+  loadIcon("svg-spinners:pulse-rings-multiple")
+</script>
 
 <Layout class="flex flex-col" title="Wait, Read">
 <div class="flex items-center gap-2">
@@ -29,5 +33,5 @@ I still bring here absolutely everything I read. <span class="leading-snug text-
 
   <!-- Maybe it should be inside the list? -->
 
-  <Browser links={articlesContent} client:load className="mt-4" />
+  <Browser client:load className="mt-4" />
 </Layout>

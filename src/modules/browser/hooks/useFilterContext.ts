@@ -3,6 +3,7 @@ import {
   BrowserFilterContext,
   INITIAL_FILTERS,
 } from "@/modules/browser/context/BrowserFilterContext";
+import type { LinkListItem } from "@/modules/browser/types/list.types";
 
 export const DEFAULT_TOPIC = "other";
 
@@ -53,7 +54,7 @@ export const useFilterContext = () => {
 
   const updateFilters = useCallback((newFilters: Partial<typeof filters>) => {
     setFilters((prev) => ({ ...prev, ...newFilters }));
-  }, [])
+  }, []);
 
   const toggleTag = (tag: string) => {
     let tags: string[];
