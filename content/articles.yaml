@@ -565,3 +565,30 @@
   topic: go
   tags:
     - pattern
+
+- name: Eli Bendersky's
+  title: "Embedding in Go: Part 3 - interfaces in structs"
+  url: https://eli.thegreenplace.net/2020/embedding-in-go-part-3-interfaces-in-structs
+  topic: go
+  tags: []
+
+- name: Medium
+  title: Database Migration — Writing Scripts & Best Practices
+  url: https://medium.com/walkin/database-migration-writing-scripts-best-practices-3634c2134782
+  tags:
+    - sql
+    - database
+
+- name: Vadim Kravcenko
+  title: Database Migrations
+  url: https://vadimkravcenko.com/shorts/database-migrations/
+  tags:
+    - sql
+    - database
+
+- name: Dev.to
+  title: 6 guidelines for risk-less data migrations
+  url: https://dev.to/slsbytheodo/6-guidelines-for-risk-less-data-migrations-3idl
+  tags:
+    - sql
+    - database
